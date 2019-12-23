@@ -1,9 +1,7 @@
-# ~~~ Write your custom ignore target ~~~
+# ~~~~~~
 
-# ~~~ Write your gitignore envs ~~~
-
-# Created by https://www.gitignore.io/api/virtualenv,python,node
-# Edit at https://www.gitignore.io/?templates=virtualenv,python,node
+# Created by https://www.gitignore.io/api/python,node,virtualenv
+# Edit at https://www.gitignore.io/?templates=python,node,virtualenv
 
 ### Node ###
 # Logs
@@ -220,4 +218,4 @@ env.bak/
 venv.bak/
 pip-selfcheck.json
 
-# End of https://www.gitignore.io/api/virtualenv,python,node
+# End of https://www.gitignore.io/api/python,node,virtualenv

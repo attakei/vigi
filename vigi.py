@@ -10,13 +10,10 @@ from urllib.request import urlopen, Request
 __version__ = '0.1.0'
 
 
-gi_line_custom = "# ~~~ Write your custom ignore target ~~~"
-gi_line_online = "# ~~~ Write your gitignore envs ~~~"
+gi_delimiter = "# ~~~~~~"
 
 gi_template = f"""
-    {gi_line_custom}
-
-    {gi_line_online}
+    {gi_delimiter}
 """
 
 
@@ -27,7 +24,7 @@ def decode_gitignore(src, dest):
         state = 'custom'
         for l in fp:
             line = l.strip()
-            if line == gi_line_online:
+            if line == gi_delimiter:
                 custom.append(line)
                 state = 'online'
             elif state == 'custom':
@@ -54,7 +51,7 @@ def encode_gitignore(src, dest):
         state = 'custom'
         for l in fp:
             line = l.strip()
-            if line == gi_line_online:
+            if line == gi_delimiter:
                 custom.append(line)
                 fp.readline()
                 line = fp.readline().strip()
